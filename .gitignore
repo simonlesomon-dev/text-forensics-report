@@ -1,0 +1,11 @@
+# This bundle is derived-only. Keep accidental source material out.
+*.epub
+*.txt
+raw/
+extracted/
+normalized/
+chunks/
+cache/
+models/
+**/.env
+**/*API_KEY*
