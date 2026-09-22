@@ -7,9 +7,9 @@
 </style></head><body><main>
 <p><a href="https://github.com/simonlesomon-dev/text-forensics-report">Dépôt public des artefacts dérivés</a></p>
 <h1>Analyse forensique et stylométrique comparative</h1>
-<p>Publication statique générée le 2026-09-22T21:56:28.971672+00:00. Elle compare des distributions et distances ; elle ne conclut pas qu’un texte est humain ou généré par IA.</p>
+<p>Publication statique générée le 2026-09-22T22:35:33.342756+00:00. Elle compare des distributions et distances ; elle ne conclut pas qu’un texte est humain ou généré par IA.</p>
 <div class="notice"><strong>Règle de lecture :</strong> « plus proche de » ou « atypique par rapport à » décrit le corpus de référence choisi. Ce n’est ni une probabilité d’origine ni une preuve d’écriture.</div>
-<h2>État des données</h2><div class="cards"><div class='card'><strong>target_book</strong><span>AVAILABLE</span><small>n=1</small></div><div class='card'><strong>historical_author</strong><span>MISSING</span><small>n=0</small></div><div class='card'><strong>author_public_reference</strong><span>AVAILABLE</span><small>n=67</small></div><div class='card'><strong>human_literary_reference</strong><span>AVAILABLE</span><small>n=33</small></div><div class='card'><strong>ai_literary_reference</strong><span>NOT_RUN</span><small>n=0</small></div><div class='card'><strong>hc3_secondary_control</strong><span>AVAILABLE</span><small>n=710</small></div><div class='card'><strong>neural_embeddings</strong><span>available</span><small>n=—</small></div><div class='card'><strong>lm_gpu_metrics</strong><span>NOT_RUN</span><small>n=—</small></div><div class='card'><strong>zero_shot</strong><span>NOT_AVAILABLE</span><small>n=—</small></div></div>
+<h2>État des données</h2><div class="cards"><div class='card'><strong>target_book</strong><span>AVAILABLE</span><small>n=1</small></div><div class='card'><strong>historical_author</strong><span>MISSING</span><small>n=0</small></div><div class='card'><strong>author_public_reference</strong><span>AVAILABLE</span><small>n=81</small></div><div class='card'><strong>human_literary_reference</strong><span>AVAILABLE</span><small>n=33</small></div><div class='card'><strong>ai_literary_reference</strong><span>NOT_RUN</span><small>n=0</small></div><div class='card'><strong>hc3_secondary_control</strong><span>AVAILABLE</span><small>n=710</small></div><div class='card'><strong>neural_embeddings</strong><span>available</span><small>n=—</small></div><div class='card'><strong>lm_gpu_metrics</strong><span>NOT_RUN</span><small>n=—</small></div><div class='card'><strong>zero_shot</strong><span>NOT_AVAILABLE</span><small>n=—</small></div></div>
 <h2>Interprétation encadrée</h2><ul><li>DESCRIPTIVE — cette page publie des statistiques agrégées, pas le contenu des œuvres.</li><li>DESCRIPTIVE — la cible représente 58,447 mots dans 1 document(s), avec des comparaisons par document, chapitre et chunk.</li><li>STATISTICAL — les tailles d’effet et intervalles doivent être interprétés avec la corrélation intra-document ; les fenêtres chevauchantes sont exclues des analyses inférentielles principales.</li><li>EXPLORATORY — les embeddings, PCA/PaCMAP/UMAP, clustering et change points décrivent des proximités exploratoires ; ils n’établissent pas une origine.</li><li>LIMITATION — le corpus historique de livres de l’auteur est absent. Les articles publics signés sont affichés séparément comme référence contemporaine, pas comme anciens livres.</li><li>LIMITATION — le corpus IA littéraire apparié n’a pas été généré sans identifiants API ; HC3 est conservé comme contrôle secondaire hors domaine littéraire.</li><li>STATISTICAL — dans la validation leave-one-document-out sur le corpus humain littéraire, la distance la plus proche appartient au même auteur dans 70.0% des documents testés ; ce benchmark ne constitue pas une preuve pour la cible.</li></ul>
 <h2>Corpus</h2><h3>Corpus par groupe</h3><table class="dataframe data">
   <thead>
@@ -27,8 +27,8 @@
     </tr>
     <tr>
       <td>author_public</td>
-      <td>67</td>
-      <td>83171.0</td>
+      <td>81</td>
+      <td>104166.0</td>
     </tr>
     <tr>
       <td>human</td>
@@ -83,9 +83,9 @@
       <td>mattr</td>
       <td>author_public</td>
       <td>0.560954</td>
-      <td>67</td>
-      <td>49.253731</td>
-      <td>0.002584</td>
+      <td>81</td>
+      <td>54.320988</td>
+      <td>0.002029</td>
       <td>available</td>
     </tr>
     <tr>
@@ -128,9 +128,9 @@
       <td>mtld</td>
       <td>author_public</td>
       <td>125.589125</td>
-      <td>67</td>
-      <td>47.761194</td>
-      <td>5.522327</td>
+      <td>81</td>
+      <td>50.617284</td>
+      <td>3.035491</td>
       <td>available</td>
     </tr>
     <tr>
@@ -173,9 +173,9 @@
       <td>zipf_slope</td>
       <td>author_public</td>
       <td>-1.039059</td>
-      <td>67</td>
+      <td>81</td>
       <td>0.000000</td>
-      <td>0.386675</td>
+      <td>0.378308</td>
       <td>available</td>
     </tr>
     <tr>
@@ -218,9 +218,9 @@
       <td>average_sentence_length</td>
       <td>author_public</td>
       <td>10.001198</td>
-      <td>67</td>
-      <td>4.477612</td>
-      <td>8.978265</td>
+      <td>81</td>
+      <td>3.703704</td>
+      <td>9.052705</td>
       <td>available</td>
     </tr>
     <tr>
@@ -263,9 +263,9 @@
       <td>repeated_bigram_ratio</td>
       <td>author_public</td>
       <td>0.507699</td>
-      <td>67</td>
-      <td>100.000000</td>
-      <td>0.330150</td>
+      <td>81</td>
+      <td>98.765432</td>
+      <td>0.320316</td>
       <td>available</td>
     </tr>
     <tr>
@@ -321,12 +321,12 @@
       <td>target_book</td>
       <td>author_public</td>
       <td>1</td>
-      <td>67</td>
-      <td>0.025835</td>
-      <td>0.492537</td>
-      <td>0.563949</td>
-      <td>0.557516</td>
-      <td>0.746269</td>
+      <td>81</td>
+      <td>0.032160</td>
+      <td>0.555556</td>
+      <td>0.657749</td>
+      <td>0.651564</td>
+      <td>0.777778</td>
     </tr>
     <tr>
       <td>mattr</td>
@@ -393,12 +393,12 @@
       <td>target_book</td>
       <td>author_public</td>
       <td>1</td>
-      <td>67</td>
-      <td>18.656060</td>
-      <td>-0.462687</td>
-      <td>-0.662788</td>
-      <td>-0.655227</td>
-      <td>0.731343</td>
+      <td>81</td>
+      <td>16.077442</td>
+      <td>-0.382716</td>
+      <td>-0.553436</td>
+      <td>-0.548231</td>
+      <td>0.691358</td>
     </tr>
     <tr>
       <td>mtld</td>
@@ -465,12 +465,12 @@
       <td>target_book</td>
       <td>author_public</td>
       <td>1</td>
-      <td>67</td>
-      <td>0.021495</td>
-      <td>0.402985</td>
-      <td>0.384129</td>
-      <td>0.379747</td>
-      <td>0.701493</td>
+      <td>81</td>
+      <td>0.028941</td>
+      <td>0.481481</td>
+      <td>0.478472</td>
+      <td>0.473973</td>
+      <td>0.740741</td>
     </tr>
     <tr>
       <td>zipf_slope</td>
@@ -537,12 +537,12 @@
       <td>target_book</td>
       <td>author_public</td>
       <td>1</td>
-      <td>67</td>
-      <td>2.859004</td>
-      <td>-0.074627</td>
-      <td>0.022193</td>
-      <td>0.021940</td>
-      <td>0.537313</td>
+      <td>81</td>
+      <td>6.952924</td>
+      <td>-0.135802</td>
+      <td>-0.055513</td>
+      <td>-0.054991</td>
+      <td>0.567901</td>
     </tr>
     <tr>
       <td>average_sentence_length</td>
@@ -609,12 +609,12 @@
       <td>target_book</td>
       <td>author_public</td>
       <td>1</td>
-      <td>67</td>
-      <td>0.020585</td>
-      <td>-0.402985</td>
-      <td>-0.485997</td>
-      <td>-0.480454</td>
-      <td>0.701493</td>
+      <td>81</td>
+      <td>0.027006</td>
+      <td>-0.481481</td>
+      <td>-0.539388</td>
+      <td>-0.534315</td>
+      <td>0.740741</td>
     </tr>
     <tr>
       <td>repeated_bigram_ratio</td>
@@ -753,12 +753,12 @@
       <td>target_book</td>
       <td>author_public</td>
       <td>1</td>
-      <td>67</td>
-      <td>0.538959</td>
-      <td>0.701493</td>
-      <td>1.046210</td>
-      <td>1.034276</td>
-      <td>0.850746</td>
+      <td>81</td>
+      <td>0.540029</td>
+      <td>0.703704</td>
+      <td>0.990055</td>
+      <td>0.980744</td>
+      <td>0.851852</td>
     </tr>
     <tr>
       <td>author_public_distance_zscore</td>
@@ -766,10 +766,10 @@
       <td>human_literary</td>
       <td>1</td>
       <td>33</td>
-      <td>0.591976</td>
+      <td>0.627216</td>
       <td>1.000000</td>
-      <td>4.020442</td>
-      <td>3.925471</td>
+      <td>4.391378</td>
+      <td>4.287645</td>
       <td>1.000000</td>
     </tr>
     <tr>
@@ -790,11 +790,11 @@
       <td>human</td>
       <td>1</td>
       <td>350</td>
-      <td>1.737955</td>
-      <td>-0.662857</td>
-      <td>-1.031158</td>
-      <td>-1.028940</td>
-      <td>0.831429</td>
+      <td>1.783717</td>
+      <td>-0.674286</td>
+      <td>-1.034741</td>
+      <td>-1.032516</td>
+      <td>0.837143</td>
     </tr>
     <tr>
       <td>author_public_distance_zscore</td>
@@ -802,11 +802,11 @@
       <td>ai</td>
       <td>1</td>
       <td>360</td>
-      <td>0.819302</td>
-      <td>-0.677778</td>
-      <td>-0.832048</td>
-      <td>-0.830309</td>
-      <td>0.838889</td>
+      <td>0.755538</td>
+      <td>-0.666667</td>
+      <td>-0.797799</td>
+      <td>-0.796131</td>
+      <td>0.833333</td>
     </tr>
   </tbody>
 </table>
