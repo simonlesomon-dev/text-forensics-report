@@ -7,10 +7,10 @@
 </style></head><body><main>
 <p><a href="https://github.com/simonlesomon-dev/text-forensics-report">Dépôt public des artefacts dérivés</a></p>
 <h1>Analyse forensique et stylométrique comparative</h1>
-<p>Publication statique générée le 2026-09-23T17:04:09.702833+00:00. Elle compare des distributions et distances ; elle ne conclut pas qu’un texte est humain ou généré par IA.</p>
+<p>Publication statique générée le 2026-09-23T22:33:53.390860+00:00. Elle compare des distributions et distances ; elle ne conclut pas qu’un texte est humain ou généré par IA.</p>
 <div class="notice"><strong>Règle de lecture :</strong> « plus proche de » ou « atypique par rapport à » décrit le corpus de référence choisi. Ce n’est ni une probabilité d’origine ni une preuve d’écriture.</div>
-<h2>État des données</h2><div class="cards"><div class='card'><strong>target_book</strong><span>AVAILABLE</span><small>n=1</small></div><div class='card'><strong>historical_author</strong><span>MISSING</span><small>n=0</small></div><div class='card'><strong>author_public_reference</strong><span>AVAILABLE</span><small>n=81</small></div><div class='card'><strong>human_literary_reference</strong><span>AVAILABLE</span><small>n=33</small></div><div class='card'><strong>ai_literary_reference</strong><span>NOT_RUN</span><small>n=0</small></div><div class='card'><strong>hc3_secondary_control</strong><span>AVAILABLE</span><small>n=710</small></div><div class='card'><strong>neural_embeddings</strong><span>available</span><small>n=—</small></div><div class='card'><strong>lm_gpu_metrics</strong><span>NOT_RUN</span><small>n=—</small></div><div class='card'><strong>zero_shot</strong><span>NOT_AVAILABLE</span><small>n=—</small></div></div>
-<h2>Interprétation encadrée</h2><ul><li>DESCRIPTIVE — cette page publie des statistiques agrégées, pas le contenu des œuvres.</li><li>DESCRIPTIVE — la cible représente 58,447 mots dans 1 document(s), avec des comparaisons par document, chapitre et chunk.</li><li>STATISTICAL — les tailles d’effet et intervalles doivent être interprétés avec la corrélation intra-document ; les fenêtres chevauchantes sont exclues des analyses inférentielles principales.</li><li>EXPLORATORY — les embeddings, PCA/PaCMAP/UMAP, clustering et change points décrivent des proximités exploratoires ; ils n’établissent pas une origine.</li><li>LIMITATION — le corpus historique de livres de l’auteur est absent. Les articles publics signés sont affichés séparément comme référence contemporaine, pas comme anciens livres.</li><li>LIMITATION — le corpus IA littéraire apparié n’a pas été généré sans identifiants API ; HC3 est conservé comme contrôle secondaire hors domaine littéraire.</li><li>STATISTICAL — dans la validation leave-one-document-out sur le corpus humain littéraire, la distance la plus proche appartient au même auteur dans 70.0% des documents testés ; ce benchmark ne constitue pas une preuve pour la cible.</li></ul>
+<h2>État des données</h2><div class="cards"><div class='card'><strong>target_book</strong><span>AVAILABLE</span><small>n=1</small></div><div class='card'><strong>historical_author</strong><span>MISSING</span><small>n=0</small></div><div class='card'><strong>author_public_reference</strong><span>AVAILABLE</span><small>n=81</small></div><div class='card'><strong>human_literary_reference</strong><span>AVAILABLE</span><small>n=33</small></div><div class='card'><strong>ai_literary_reference</strong><span>AVAILABLE</span><small>n=288</small></div><div class='card'><strong>hc3_secondary_control</strong><span>AVAILABLE</span><small>n=710</small></div><div class='card'><strong>neural_embeddings</strong><span>available</span><small>n=—</small></div><div class='card'><strong>lm_gpu_metrics</strong><span>AVAILABLE</span><small>n=—</small></div><div class='card'><strong>cross_domain_reference_test</strong><span>AVAILABLE</span><small>n=—</small></div><div class='card'><strong>zero_shot</strong><span>NOT_AVAILABLE</span><small>n=—</small></div></div>
+<h2>Interprétation encadrée</h2><ul><li>DESCRIPTIVE — cette page publie des statistiques agrégées, pas le contenu des œuvres.</li><li>DESCRIPTIVE — la cible représente 58,447 mots dans 1 document(s), avec des comparaisons par document, chapitre et chunk.</li><li>STATISTICAL — les tailles d’effet et intervalles doivent être interprétés avec la corrélation intra-document ; les fenêtres chevauchantes sont exclues des analyses inférentielles principales.</li><li>EXPLORATORY — les embeddings, PCA/PaCMAP/UMAP, clustering et change points décrivent des proximités exploratoires ; ils n’établissent pas une origine.</li><li>LIMITATION — le corpus historique de livres de l’auteur est absent. Les articles publics signés sont affichés séparément comme référence contemporaine, pas comme anciens livres.</li><li>DESCRIPTIVE — corpus IA littéraire disponible : 288 documents, 4 modèles, générations narratives appariées par prompts génériques. HC3 reste un contrôle secondaire hors domaine littéraire.</li><li>STATISTICAL — dans la validation leave-one-document-out sur le corpus humain littéraire, la distance la plus proche appartient au même auteur dans 70.0% des documents testés ; ce benchmark ne constitue pas une preuve pour la cible.</li></ul>
 <h2>Corpus</h2><h3>Corpus par groupe</h3><div class='table-wrap' role='region' tabindex='0' aria-label='Tableau : Corpus par groupe'><table class="dataframe data">
   <thead>
     <tr style="text-align: right;">
@@ -24,6 +24,11 @@
       <td>ai</td>
       <td>360</td>
       <td>65267.0</td>
+    </tr>
+    <tr>
+      <td>ai_literary</td>
+      <td>288</td>
+      <td>284900.0</td>
     </tr>
     <tr>
       <td>author_public</td>
@@ -74,10 +79,10 @@
       <td>mattr</td>
       <td>ai_literary</td>
       <td>0.560954</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NOT_AVAILABLE</td>
+      <td>288</td>
+      <td>92.361111</td>
+      <td>0.079844</td>
+      <td>available</td>
     </tr>
     <tr>
       <td>mattr</td>
@@ -119,10 +124,10 @@
       <td>mtld</td>
       <td>ai_literary</td>
       <td>125.589125</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NOT_AVAILABLE</td>
+      <td>288</td>
+      <td>78.819444</td>
+      <td>35.403661</td>
+      <td>available</td>
     </tr>
     <tr>
       <td>mtld</td>
@@ -164,10 +169,10 @@
       <td>zipf_slope</td>
       <td>ai_literary</td>
       <td>-1.039059</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NOT_AVAILABLE</td>
+      <td>288</td>
+      <td>2.430556</td>
+      <td>0.293304</td>
+      <td>available</td>
     </tr>
     <tr>
       <td>zipf_slope</td>
@@ -209,10 +214,10 @@
       <td>average_sentence_length</td>
       <td>ai_literary</td>
       <td>10.001198</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NOT_AVAILABLE</td>
+      <td>288</td>
+      <td>40.277778</td>
+      <td>1.361106</td>
+      <td>available</td>
     </tr>
     <tr>
       <td>average_sentence_length</td>
@@ -254,10 +259,10 @@
       <td>repeated_bigram_ratio</td>
       <td>ai_literary</td>
       <td>0.507699</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NOT_AVAILABLE</td>
+      <td>288</td>
+      <td>92.361111</td>
+      <td>0.237550</td>
+      <td>available</td>
     </tr>
     <tr>
       <td>repeated_bigram_ratio</td>
@@ -284,6 +289,141 @@
       <td>360</td>
       <td>99.444444</td>
       <td>0.283880</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>perplexity</td>
+      <td>human_literary</td>
+      <td>25.353923</td>
+      <td>33</td>
+      <td>100.000000</td>
+      <td>7.373852</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>perplexity</td>
+      <td>ai_literary</td>
+      <td>25.353923</td>
+      <td>288</td>
+      <td>100.000000</td>
+      <td>17.521694</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>perplexity</td>
+      <td>author_public</td>
+      <td>25.353923</td>
+      <td>81</td>
+      <td>88.888889</td>
+      <td>9.308230</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>perplexity</td>
+      <td>human</td>
+      <td>25.353923</td>
+      <td>350</td>
+      <td>82.571429</td>
+      <td>2.296919</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>perplexity</td>
+      <td>ai</td>
+      <td>25.353923</td>
+      <td>360</td>
+      <td>99.722222</td>
+      <td>19.243812</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>mean_log_rank</td>
+      <td>human_literary</td>
+      <td>1.520226</td>
+      <td>33</td>
+      <td>57.575758</td>
+      <td>0.010273</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>mean_log_rank</td>
+      <td>ai_literary</td>
+      <td>1.520226</td>
+      <td>288</td>
+      <td>100.000000</td>
+      <td>0.589347</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>mean_log_rank</td>
+      <td>author_public</td>
+      <td>1.520226</td>
+      <td>81</td>
+      <td>71.604938</td>
+      <td>0.111439</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>mean_log_rank</td>
+      <td>human</td>
+      <td>1.520226</td>
+      <td>350</td>
+      <td>61.714286</td>
+      <td>0.023287</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>mean_log_rank</td>
+      <td>ai</td>
+      <td>1.520226</td>
+      <td>360</td>
+      <td>99.444444</td>
+      <td>0.703506</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>mean_log_probability</td>
+      <td>human_literary</td>
+      <td>-2.862255</td>
+      <td>33</td>
+      <td>51.515152</td>
+      <td>0.009698</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>mean_log_probability</td>
+      <td>ai_literary</td>
+      <td>-2.862255</td>
+      <td>288</td>
+      <td>0.000000</td>
+      <td>0.859773</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>mean_log_probability</td>
+      <td>author_public</td>
+      <td>-2.862255</td>
+      <td>81</td>
+      <td>29.629630</td>
+      <td>0.185014</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>mean_log_probability</td>
+      <td>human</td>
+      <td>-2.862255</td>
+      <td>350</td>
+      <td>38.571429</td>
+      <td>0.035493</td>
+      <td>available</td>
+    </tr>
+    <tr>
+      <td>mean_log_probability</td>
+      <td>ai</td>
+      <td>-2.862255</td>
+      <td>360</td>
+      <td>0.555556</td>
+      <td>1.097468</td>
       <td>available</td>
     </tr>
   </tbody>
@@ -322,11 +462,11 @@
       <td>author_public</td>
       <td>1</td>
       <td>81</td>
-      <td>0.032160</td>
-      <td>0.555556</td>
-      <td>0.657749</td>
-      <td>0.651564</td>
-      <td>0.777778</td>
+      <td>0.010604</td>
+      <td>0.358025</td>
+      <td>0.206851</td>
+      <td>0.204906</td>
+      <td>0.679012</td>
     </tr>
     <tr>
       <td>mattr</td>
@@ -334,10 +474,10 @@
       <td>human_literary</td>
       <td>1</td>
       <td>33</td>
-      <td>0.061594</td>
+      <td>0.048750</td>
       <td>1.000000</td>
-      <td>2.600506</td>
-      <td>2.539076</td>
+      <td>2.054105</td>
+      <td>2.005583</td>
       <td>1.000000</td>
     </tr>
     <tr>
@@ -345,12 +485,12 @@
       <td>target_book</td>
       <td>ai_literary</td>
       <td>1</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>288</td>
+      <td>0.089916</td>
+      <td>0.763889</td>
+      <td>1.133832</td>
+      <td>1.130866</td>
+      <td>0.881944</td>
     </tr>
     <tr>
       <td>mattr</td>
@@ -358,167 +498,167 @@
       <td>human</td>
       <td>1</td>
       <td>350</td>
-      <td>0.113202</td>
-      <td>-0.497143</td>
-      <td>-0.812617</td>
-      <td>-0.810869</td>
-      <td>0.748571</td>
-    </tr>
-    <tr>
-      <td>mattr</td>
-      <td>target_book</td>
-      <td>ai</td>
-      <td>1</td>
-      <td>360</td>
-      <td>0.053658</td>
-      <td>0.538889</td>
-      <td>0.543274</td>
-      <td>0.542138</td>
-      <td>0.769444</td>
-    </tr>
-    <tr>
-      <td>mtld</td>
-      <td>target_book</td>
-      <td>author_old</td>
-      <td>1</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>mtld</td>
-      <td>target_book</td>
-      <td>author_public</td>
-      <td>1</td>
-      <td>81</td>
-      <td>16.077442</td>
-      <td>-0.382716</td>
-      <td>-0.553436</td>
-      <td>-0.548231</td>
-      <td>0.691358</td>
-    </tr>
-    <tr>
-      <td>mtld</td>
-      <td>target_book</td>
-      <td>human_literary</td>
-      <td>1</td>
-      <td>33</td>
-      <td>19.031332</td>
-      <td>-0.454545</td>
-      <td>-0.818847</td>
-      <td>-0.799504</td>
-      <td>0.727273</td>
-    </tr>
-    <tr>
-      <td>mtld</td>
-      <td>target_book</td>
-      <td>ai_literary</td>
-      <td>1</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>mtld</td>
-      <td>target_book</td>
-      <td>human</td>
-      <td>1</td>
-      <td>350</td>
-      <td>33.159213</td>
-      <td>0.708571</td>
-      <td>0.798076</td>
-      <td>0.796359</td>
-      <td>0.854286</td>
-    </tr>
-    <tr>
-      <td>mtld</td>
-      <td>target_book</td>
-      <td>ai</td>
-      <td>1</td>
-      <td>360</td>
-      <td>48.054815</td>
-      <td>0.983333</td>
-      <td>2.583940</td>
-      <td>2.578538</td>
-      <td>0.991667</td>
-    </tr>
-    <tr>
-      <td>zipf_slope</td>
-      <td>target_book</td>
-      <td>author_old</td>
-      <td>1</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>zipf_slope</td>
-      <td>target_book</td>
-      <td>author_public</td>
-      <td>1</td>
-      <td>81</td>
-      <td>0.028941</td>
-      <td>0.481481</td>
-      <td>0.478472</td>
-      <td>0.473973</td>
-      <td>0.740741</td>
-    </tr>
-    <tr>
-      <td>zipf_slope</td>
-      <td>target_book</td>
-      <td>human_literary</td>
-      <td>1</td>
-      <td>33</td>
-      <td>0.076932</td>
-      <td>1.000000</td>
-      <td>2.550449</td>
-      <td>2.490202</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <td>zipf_slope</td>
-      <td>target_book</td>
-      <td>ai_literary</td>
-      <td>1</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>zipf_slope</td>
-      <td>target_book</td>
-      <td>human</td>
-      <td>1</td>
-      <td>350</td>
-      <td>0.145096</td>
+      <td>0.126457</td>
       <td>-0.560000</td>
-      <td>-0.876315</td>
-      <td>-0.874430</td>
+      <td>-0.912835</td>
+      <td>-0.910872</td>
       <td>0.780000</td>
     </tr>
     <tr>
+      <td>mattr</td>
+      <td>target_book</td>
+      <td>ai</td>
+      <td>1</td>
+      <td>360</td>
+      <td>0.040942</td>
+      <td>0.450000</td>
+      <td>0.414520</td>
+      <td>0.413653</td>
+      <td>0.725000</td>
+    </tr>
+    <tr>
+      <td>mtld</td>
+      <td>target_book</td>
+      <td>author_old</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>mtld</td>
+      <td>target_book</td>
+      <td>author_public</td>
+      <td>1</td>
+      <td>81</td>
+      <td>11.978275</td>
+      <td>-0.333333</td>
+      <td>-0.413140</td>
+      <td>-0.409255</td>
+      <td>0.666667</td>
+    </tr>
+    <tr>
+      <td>mtld</td>
+      <td>target_book</td>
+      <td>human_literary</td>
+      <td>1</td>
+      <td>33</td>
+      <td>15.008729</td>
+      <td>-0.333333</td>
+      <td>-0.659906</td>
+      <td>-0.644317</td>
+      <td>0.666667</td>
+    </tr>
+    <tr>
+      <td>mtld</td>
+      <td>target_book</td>
+      <td>ai_literary</td>
+      <td>1</td>
+      <td>288</td>
+      <td>27.147918</td>
+      <td>0.555556</td>
+      <td>0.806573</td>
+      <td>0.804464</td>
+      <td>0.777778</td>
+    </tr>
+    <tr>
+      <td>mtld</td>
+      <td>target_book</td>
+      <td>human</td>
+      <td>1</td>
+      <td>350</td>
+      <td>37.042417</td>
+      <td>0.737143</td>
+      <td>0.891359</td>
+      <td>0.889442</td>
+      <td>0.868571</td>
+    </tr>
+    <tr>
+      <td>mtld</td>
+      <td>target_book</td>
+      <td>ai</td>
+      <td>1</td>
+      <td>360</td>
+      <td>51.943848</td>
+      <td>0.988889</td>
+      <td>2.793056</td>
+      <td>2.787217</td>
+      <td>0.994444</td>
+    </tr>
+    <tr>
+      <td>zipf_slope</td>
+      <td>target_book</td>
+      <td>author_old</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>zipf_slope</td>
+      <td>target_book</td>
+      <td>author_public</td>
+      <td>1</td>
+      <td>81</td>
+      <td>0.010888</td>
+      <td>0.333333</td>
+      <td>0.191932</td>
+      <td>0.190127</td>
+      <td>0.666667</td>
+    </tr>
+    <tr>
+      <td>zipf_slope</td>
+      <td>target_book</td>
+      <td>human_literary</td>
+      <td>1</td>
+      <td>33</td>
+      <td>0.051113</td>
+      <td>0.878788</td>
+      <td>1.781702</td>
+      <td>1.739615</td>
+      <td>0.939394</td>
+    </tr>
+    <tr>
+      <td>zipf_slope</td>
+      <td>target_book</td>
+      <td>ai_literary</td>
+      <td>1</td>
+      <td>288</td>
+      <td>0.100502</td>
+      <td>0.777778</td>
+      <td>1.173348</td>
+      <td>1.170279</td>
+      <td>0.888889</td>
+    </tr>
+    <tr>
+      <td>zipf_slope</td>
+      <td>target_book</td>
+      <td>human</td>
+      <td>1</td>
+      <td>350</td>
+      <td>0.131307</td>
+      <td>-0.520000</td>
+      <td>-0.797163</td>
+      <td>-0.795449</td>
+      <td>0.760000</td>
+    </tr>
+    <tr>
       <td>zipf_slope</td>
       <td>target_book</td>
       <td>ai</td>
       <td>1</td>
       <td>360</td>
-      <td>0.045784</td>
-      <td>0.472222</td>
-      <td>0.412570</td>
-      <td>0.411707</td>
-      <td>0.736111</td>
+      <td>0.060191</td>
+      <td>0.516667</td>
+      <td>0.542389</td>
+      <td>0.541255</td>
+      <td>0.758333</td>
     </tr>
     <tr>
       <td>average_sentence_length</td>
@@ -538,11 +678,11 @@
       <td>author_public</td>
       <td>1</td>
       <td>81</td>
-      <td>6.952924</td>
-      <td>-0.135802</td>
-      <td>-0.055513</td>
-      <td>-0.054991</td>
-      <td>0.567901</td>
+      <td>8.006882</td>
+      <td>-0.876543</td>
+      <td>-1.602524</td>
+      <td>-1.587453</td>
+      <td>0.938272</td>
     </tr>
     <tr>
       <td>average_sentence_length</td>
@@ -550,10 +690,10 @@
       <td>human_literary</td>
       <td>1</td>
       <td>33</td>
-      <td>233.263086</td>
+      <td>7.882243</td>
       <td>-1.000000</td>
-      <td>-109.865329</td>
-      <td>-107.270085</td>
+      <td>-1.221103</td>
+      <td>-1.192258</td>
       <td>1.000000</td>
     </tr>
     <tr>
@@ -561,12 +701,12 @@
       <td>target_book</td>
       <td>ai_literary</td>
       <td>1</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>288</td>
+      <td>0.823362</td>
+      <td>-0.090278</td>
+      <td>-0.267652</td>
+      <td>-0.266952</td>
+      <td>0.545139</td>
     </tr>
     <tr>
       <td>average_sentence_length</td>
@@ -574,11 +714,11 @@
       <td>human</td>
       <td>1</td>
       <td>350</td>
-      <td>501.142406</td>
-      <td>1.000000</td>
-      <td>4.429231</td>
-      <td>4.419705</td>
-      <td>1.000000</td>
+      <td>13.400925</td>
+      <td>-0.834286</td>
+      <td>-0.867949</td>
+      <td>-0.866082</td>
+      <td>0.917143</td>
     </tr>
     <tr>
       <td>average_sentence_length</td>
@@ -586,11 +726,11 @@
       <td>ai</td>
       <td>1</td>
       <td>360</td>
-      <td>440.032565</td>
-      <td>1.000000</td>
-      <td>6.080517</td>
-      <td>6.067805</td>
-      <td>1.000000</td>
+      <td>19.324423</td>
+      <td>-0.983333</td>
+      <td>-1.126302</td>
+      <td>-1.123947</td>
+      <td>0.991667</td>
     </tr>
     <tr>
       <td>repeated_bigram_ratio</td>
@@ -610,134 +750,206 @@
       <td>author_public</td>
       <td>1</td>
       <td>81</td>
-      <td>0.027006</td>
-      <td>-0.481481</td>
-      <td>-0.539388</td>
-      <td>-0.534315</td>
+      <td>0.019937</td>
+      <td>-0.358025</td>
+      <td>-0.466671</td>
+      <td>-0.462282</td>
+      <td>0.679012</td>
+    </tr>
+    <tr>
+      <td>repeated_bigram_ratio</td>
+      <td>target_book</td>
+      <td>human_literary</td>
+      <td>1</td>
+      <td>33</td>
+      <td>0.012257</td>
+      <td>-0.515152</td>
+      <td>-0.519481</td>
+      <td>-0.507210</td>
+      <td>0.757576</td>
+    </tr>
+    <tr>
+      <td>repeated_bigram_ratio</td>
+      <td>target_book</td>
+      <td>ai_literary</td>
+      <td>1</td>
+      <td>288</td>
+      <td>0.107012</td>
+      <td>-0.743056</td>
+      <td>-0.881565</td>
+      <td>-0.879260</td>
+      <td>0.871528</td>
+    </tr>
+    <tr>
+      <td>repeated_bigram_ratio</td>
+      <td>target_book</td>
+      <td>human</td>
+      <td>1</td>
+      <td>350</td>
+      <td>0.003205</td>
+      <td>0.125714</td>
+      <td>-0.037360</td>
+      <td>-0.037279</td>
+      <td>0.562857</td>
+    </tr>
+    <tr>
+      <td>repeated_bigram_ratio</td>
+      <td>target_book</td>
+      <td>ai</td>
+      <td>1</td>
+      <td>360</td>
+      <td>0.133560</td>
+      <td>-0.838889</td>
+      <td>-1.253925</td>
+      <td>-1.251303</td>
+      <td>0.919444</td>
+    </tr>
+    <tr>
+      <td>author_distance_zscore</td>
+      <td>target_book</td>
+      <td>author_old</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>author_distance_zscore</td>
+      <td>target_book</td>
+      <td>author_public</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>author_distance_zscore</td>
+      <td>target_book</td>
+      <td>human_literary</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>author_distance_zscore</td>
+      <td>target_book</td>
+      <td>ai_literary</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>author_distance_zscore</td>
+      <td>target_book</td>
+      <td>human</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>author_distance_zscore</td>
+      <td>target_book</td>
+      <td>ai</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>author_public_distance_zscore</td>
+      <td>target_book</td>
+      <td>author_old</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>author_public_distance_zscore</td>
+      <td>target_book</td>
+      <td>author_public</td>
+      <td>1</td>
+      <td>81</td>
+      <td>0.501067</td>
+      <td>0.481481</td>
+      <td>0.764633</td>
+      <td>0.757442</td>
       <td>0.740741</td>
     </tr>
     <tr>
-      <td>repeated_bigram_ratio</td>
+      <td>author_public_distance_zscore</td>
       <td>target_book</td>
       <td>human_literary</td>
       <td>1</td>
       <td>33</td>
-      <td>0.019687</td>
-      <td>-0.636364</td>
-      <td>-0.801371</td>
-      <td>-0.782441</td>
+      <td>0.476556</td>
       <td>0.818182</td>
+      <td>1.143384</td>
+      <td>1.116374</td>
+      <td>0.909091</td>
     </tr>
     <tr>
-      <td>repeated_bigram_ratio</td>
+      <td>author_public_distance_zscore</td>
       <td>target_book</td>
       <td>ai_literary</td>
       <td>1</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>288</td>
+      <td>0.246952</td>
+      <td>-0.020833</td>
+      <td>-0.202664</td>
+      <td>-0.202134</td>
+      <td>0.510417</td>
     </tr>
     <tr>
-      <td>repeated_bigram_ratio</td>
+      <td>author_public_distance_zscore</td>
       <td>target_book</td>
       <td>human</td>
       <td>1</td>
       <td>350</td>
-      <td>0.011528</td>
-      <td>0.228571</td>
-      <td>0.133665</td>
-      <td>0.133377</td>
-      <td>0.614286</td>
+      <td>2.292081</td>
+      <td>-0.794286</td>
+      <td>-1.123373</td>
+      <td>-1.120957</td>
+      <td>0.897143</td>
     </tr>
     <tr>
-      <td>repeated_bigram_ratio</td>
+      <td>author_public_distance_zscore</td>
       <td>target_book</td>
       <td>ai</td>
       <td>1</td>
       <td>360</td>
-      <td>0.118478</td>
-      <td>-0.772222</td>
-      <td>-1.112331</td>
-      <td>-1.110006</td>
-      <td>0.886111</td>
+      <td>1.427031</td>
+      <td>-0.783333</td>
+      <td>-0.727060</td>
+      <td>-0.725540</td>
+      <td>0.891667</td>
     </tr>
     <tr>
-      <td>author_distance_zscore</td>
-      <td>target_book</td>
-      <td>author_old</td>
-      <td>0</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>author_distance_zscore</td>
-      <td>target_book</td>
-      <td>author_public</td>
-      <td>0</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>author_distance_zscore</td>
-      <td>target_book</td>
-      <td>human_literary</td>
-      <td>0</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>author_distance_zscore</td>
-      <td>target_book</td>
-      <td>ai_literary</td>
-      <td>0</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>author_distance_zscore</td>
-      <td>target_book</td>
-      <td>human</td>
-      <td>0</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>author_distance_zscore</td>
-      <td>target_book</td>
-      <td>ai</td>
-      <td>0</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>author_public_distance_zscore</td>
+      <td>perplexity</td>
       <td>target_book</td>
       <td>author_old</td>
       <td>1</td>
@@ -749,33 +961,69 @@
       <td>NaN</td>
     </tr>
     <tr>
-      <td>author_public_distance_zscore</td>
+      <td>perplexity</td>
       <td>target_book</td>
       <td>author_public</td>
       <td>1</td>
       <td>81</td>
-      <td>0.540029</td>
-      <td>0.703704</td>
-      <td>0.990055</td>
-      <td>0.980744</td>
-      <td>0.851852</td>
+      <td>9.308230</td>
+      <td>0.777778</td>
+      <td>1.341704</td>
+      <td>1.329086</td>
+      <td>0.888889</td>
     </tr>
     <tr>
-      <td>author_public_distance_zscore</td>
+      <td>perplexity</td>
       <td>target_book</td>
       <td>human_literary</td>
       <td>1</td>
       <td>33</td>
-      <td>0.627216</td>
+      <td>7.373852</td>
       <td>1.000000</td>
-      <td>4.391378</td>
-      <td>4.287645</td>
+      <td>3.484751</td>
+      <td>3.402434</td>
       <td>1.000000</td>
     </tr>
     <tr>
-      <td>author_public_distance_zscore</td>
+      <td>perplexity</td>
       <td>target_book</td>
       <td>ai_literary</td>
+      <td>1</td>
+      <td>288</td>
+      <td>17.521694</td>
+      <td>1.000000</td>
+      <td>7.635232</td>
+      <td>7.615262</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>perplexity</td>
+      <td>target_book</td>
+      <td>human</td>
+      <td>1</td>
+      <td>350</td>
+      <td>2.296919</td>
+      <td>0.651429</td>
+      <td>0.058986</td>
+      <td>0.058859</td>
+      <td>0.825714</td>
+    </tr>
+    <tr>
+      <td>perplexity</td>
+      <td>target_book</td>
+      <td>ai</td>
+      <td>1</td>
+      <td>360</td>
+      <td>19.243812</td>
+      <td>0.994444</td>
+      <td>8.085240</td>
+      <td>8.068337</td>
+      <td>0.997222</td>
+    </tr>
+    <tr>
+      <td>mean_log_rank</td>
+      <td>target_book</td>
+      <td>author_old</td>
       <td>1</td>
       <td>0</td>
       <td>NaN</td>
@@ -785,28 +1033,136 @@
       <td>NaN</td>
     </tr>
     <tr>
-      <td>author_public_distance_zscore</td>
+      <td>mean_log_rank</td>
+      <td>target_book</td>
+      <td>author_public</td>
+      <td>1</td>
+      <td>81</td>
+      <td>0.111439</td>
+      <td>0.432099</td>
+      <td>0.424814</td>
+      <td>0.420819</td>
+      <td>0.716049</td>
+    </tr>
+    <tr>
+      <td>mean_log_rank</td>
+      <td>target_book</td>
+      <td>human_literary</td>
+      <td>1</td>
+      <td>33</td>
+      <td>0.010273</td>
+      <td>0.151515</td>
+      <td>0.129799</td>
+      <td>0.126733</td>
+      <td>0.575758</td>
+    </tr>
+    <tr>
+      <td>mean_log_rank</td>
+      <td>target_book</td>
+      <td>ai_literary</td>
+      <td>1</td>
+      <td>288</td>
+      <td>0.589347</td>
+      <td>1.000000</td>
+      <td>3.152026</td>
+      <td>3.143782</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>mean_log_rank</td>
       <td>target_book</td>
       <td>human</td>
       <td>1</td>
       <td>350</td>
-      <td>1.783717</td>
-      <td>-0.674286</td>
-      <td>-1.034741</td>
-      <td>-1.032516</td>
-      <td>0.837143</td>
+      <td>0.023287</td>
+      <td>0.234286</td>
+      <td>0.055097</td>
+      <td>0.054978</td>
+      <td>0.617143</td>
     </tr>
     <tr>
-      <td>author_public_distance_zscore</td>
+      <td>mean_log_rank</td>
       <td>target_book</td>
       <td>ai</td>
       <td>1</td>
       <td>360</td>
-      <td>0.755538</td>
-      <td>-0.666667</td>
-      <td>-0.797799</td>
-      <td>-0.796131</td>
-      <td>0.833333</td>
+      <td>0.703506</td>
+      <td>0.988889</td>
+      <td>4.113642</td>
+      <td>4.105042</td>
+      <td>0.994444</td>
+    </tr>
+    <tr>
+      <td>mean_log_probability</td>
+      <td>target_book</td>
+      <td>author_old</td>
+      <td>1</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>mean_log_probability</td>
+      <td>target_book</td>
+      <td>author_public</td>
+      <td>1</td>
+      <td>81</td>
+      <td>0.185014</td>
+      <td>-0.407407</td>
+      <td>-0.463765</td>
+      <td>-0.459404</td>
+      <td>0.703704</td>
+    </tr>
+    <tr>
+      <td>mean_log_probability</td>
+      <td>target_book</td>
+      <td>human_literary</td>
+      <td>1</td>
+      <td>33</td>
+      <td>0.009698</td>
+      <td>0.030303</td>
+      <td>0.081872</td>
+      <td>0.079938</td>
+      <td>0.515152</td>
+    </tr>
+    <tr>
+      <td>mean_log_probability</td>
+      <td>target_book</td>
+      <td>ai_literary</td>
+      <td>1</td>
+      <td>288</td>
+      <td>0.859773</td>
+      <td>-1.000000</td>
+      <td>-2.790796</td>
+      <td>-2.783497</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <td>mean_log_probability</td>
+      <td>target_book</td>
+      <td>human</td>
+      <td>1</td>
+      <td>350</td>
+      <td>0.035493</td>
+      <td>-0.228571</td>
+      <td>-0.056744</td>
+      <td>-0.056622</td>
+      <td>0.614286</td>
+    </tr>
+    <tr>
+      <td>mean_log_probability</td>
+      <td>target_book</td>
+      <td>ai</td>
+      <td>1</td>
+      <td>360</td>
+      <td>1.097468</td>
+      <td>-0.988889</td>
+      <td>-3.943006</td>
+      <td>-3.934763</td>
+      <td>0.994444</td>
     </tr>
   </tbody>
 </table></div>
@@ -1026,12 +1382,84 @@
     </tr>
   </tbody>
 </table></div>
+<h2>Généralisation inter-domaines</h2><h3>Généralisation entre domaines (documents de référence uniquement)</h3><div class='table-wrap' role='region' tabindex='0' aria-label='Tableau : Généralisation entre domaines (documents de référence uniquement)'><table class="dataframe data">
+  <thead>
+    <tr style="text-align: right;">
+      <th>train_domain</th>
+      <th>test_domain</th>
+      <th>status</th>
+      <th>model</th>
+      <th>n_train_documents</th>
+      <th>n_test_documents</th>
+      <th>n_test_positive_documents</th>
+      <th>n_test_negative_documents</th>
+      <th>auroc</th>
+      <th>auroc_ci_low</th>
+      <th>auroc_ci_high</th>
+      <th>auprc</th>
+      <th>auprc_ci_low</th>
+      <th>auprc_ci_high</th>
+      <th>balanced_accuracy</th>
+      <th>tpr_at_fpr_10pct</th>
+      <th>tpr_at_fpr_5pct</th>
+      <th>tpr_at_fpr_1pct</th>
+      <th>tpr_at_fpr_0_1pct</th>
+      <th>features_used</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>hc3</td>
+      <td>literary</td>
+      <td>ok</td>
+      <td>logistic_regression</td>
+      <td>710</td>
+      <td>321</td>
+      <td>288</td>
+      <td>33</td>
+      <td>0.080598</td>
+      <td>0.05114</td>
+      <td>0.110152</td>
+      <td>0.784416</td>
+      <td>0.718065</td>
+      <td>0.851432</td>
+      <td>0.472222</td>
+      <td>0.031250</td>
+      <td>0.027778</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>type_token_ratio,mattr,mtld,shannon_lexical_entropy,average_sentence_length,coefficient_variation_sentence_length,zipf_slope,repeated_bigram_ratio</td>
+    </tr>
+    <tr>
+      <td>literary</td>
+      <td>hc3</td>
+      <td>ok</td>
+      <td>logistic_regression</td>
+      <td>321</td>
+      <td>710</td>
+      <td>360</td>
+      <td>350</td>
+      <td>0.288413</td>
+      <td>0.24751</td>
+      <td>0.328613</td>
+      <td>0.375484</td>
+      <td>0.347088</td>
+      <td>0.413081</td>
+      <td>0.497381</td>
+      <td>0.016667</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>type_token_ratio,mattr,mtld,shannon_lexical_entropy,average_sentence_length,coefficient_variation_sentence_length,zipf_slope,repeated_bigram_ratio</td>
+    </tr>
+  </tbody>
+</table></div>
 <section id='metric-guide' class='metric-guide'><h2>Comment lire les métriques</h2><p>Chaque graphique décrit une propriété mesurée dans les références de cette exécution. Une proximité signifie seulement que les valeurs sont ressemblantes selon cette représentation.</p><ul><li><strong>Distribution :</strong> comparez médiane, dispersion et chevauchement ; une moyenne seule masque les variations entre documents.</li><li><strong>Percentile :</strong> 90 signifie que la valeur cible dépasse environ 90 % des documents de référence sur cette métrique, pas qu’il y a 90 % de chances d’une origine donnée.</li><li><strong>Distance / projection :</strong> une petite distance indique une ressemblance selon les variables choisies. PCA/PaCMAP en 2D déforment l’espace ; les amas restent exploratoires.</li><li><strong>Taille d’effet :</strong> Cliff’s delta varie de −1 à +1 et décrit le décalage entre deux distributions. Le signe dépend de l’ordre des groupes ; il ne donne pas une certitude.</li><li><strong>ROC / précision-rappel :</strong> performances mesurées sur les corpus de référence et leur protocole de séparation. Elles ne sont ni un score individuel fiable ni une probabilité calibrée.</li><li><strong>Perplexité / log-rank :</strong> évaluent la compatibilité avec un modèle de langue précis. Les comparaisons ne valent qu’avec le même modèle et tokenizer ; faible perplexité ne signifie pas « écrit par IA ».</li><li><strong>n et dépendance :</strong> n devrait compter les documents indépendants ; plusieurs chunks d’un même livre ne valent pas plusieurs livres et ne doivent pas gonfler artificiellement la confiance.</li></ul><p class='notice'>Aucun graphique, métrique ou recouvrement de points ne constitue à lui seul une preuve d’origine humaine ou IA.</p></section>
 <h2>Figures et état des calculs</h2><p>28 graphiques sont attendus. Les cartes non disponibles restent visibles ; une vignette portant un message de disponibilité est un placeholder et non une observation.</p>
-<section id="unavailable-figures"><h3>Figures absentes, partielles ou à recalculer</h3><div class='unavailable-list'><p>Ces figures restent affichées dans la galerie avec leur vignette ou leur carte d’absence.</p><ul><li><a href="#figure-02_sentence_length_distribution">Longueur des phrases</a> <span class="status-badge">À REFAIRE</span> — Le découpage des chunks de cette exécution a perdu les frontières de phrases et la ponctuation ; ne pas interpréter ces métriques chunk-level.</li><li><a href="#figure-06_punctuation_profile">Profil de ponctuation</a> <span class="status-badge">À REFAIRE</span> — Le découpage des chunks de cette exécution a perdu les frontières de phrases et la ponctuation ; ne pas interpréter ces métriques chunk-level.</li><li><a href="#figure-09_author_distance_distribution">Distance à la baseline historique</a> <span class="status-badge">NON CALCULÉ</span> — La baseline de livres historiques de l’auteur est absente ; aucune distance historique n’a été calculée.</li><li><a href="#figure-11_pacmap">Projection PaCMAP</a> <span class="status-badge">NON CALCULÉ</span> — La projection PaCMAP n’a pas été calculée pendant cette exécution.</li><li><a href="#figure-13_target_timeline">Évolution au fil du livre</a> <span class="status-badge">PARTIEL</span> — Les métriques partagent un axe brut ; la longueur de phrase est affectée par le découpage et la distance historique auteur est absente.</li><li><a href="#figure-14_lm_perplexity_distribution">Perplexité du modèle de langue</a> <span class="status-badge">NON CALCULÉ</span> — Aucun job GPU LM n’a produit de métriques ; perplexité, log-rank et corrélations sont indisponibles.</li><li><a href="#figure-15_lm_logrank_distribution">Rang des tokens sous le modèle</a> <span class="status-badge">NON CALCULÉ</span> — Aucun job GPU LM n’a produit de métriques ; perplexité, log-rank et corrélations sont indisponibles.</li><li><a href="#figure-17_ai_literary_vs_hc3">Référence IA littéraire et HC3</a> <span class="status-badge">PARTIEL</span> — Seul HC3-AI (réponses Q/R, contrôle hors domaine) est présent ; aucune référence IA littéraire n’est disponible.</li><li><a href="#figure-25_stylometric_projection">Projection de deux métriques stylométriques</a> <span class="status-badge">À REFAIRE</span> — Le découpage des chunks de cette exécution a perdu les frontières de phrases et la ponctuation ; ne pas interpréter ces métriques chunk-level.</li><li><a href="#figure-26_lm_metrics_correlation">Corrélation entre métriques LLM</a> <span class="status-badge">NON CALCULÉ</span> — Aucun job GPU LM n’a produit de métriques ; perplexité, log-rank et corrélations sont indisponibles.</li><li><a href="#figure-28_ai_model_comparison">Comparaison entre modèles génératifs</a> <span class="status-badge">NON CALCULÉ</span> — Le corpus de générations IA littéraires multi-modèles n’a pas été constitué.</li></ul></div></section>
-<div class="gallery"><figure class="chart-card" id="figure-01_corpus_sizes" data-state="available"><div class="figure-heading"><h3>Taille des corpus</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/01_corpus_sizes.svg" data-title="Taille des corpus" aria-label="Agrandir le graphique : Taille des corpus"><img loading="lazy" decoding="async" src="assets/01_corpus_sizes.png" alt="Taille des corpus — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Nombre de documents distincts par groupe.</p><p><strong>Lecture :</strong> Chaque barre compte des documents, pas des chunks. Des groupes très déséquilibrés rendent les comparaisons et benchmarks plus fragiles.</p><p><strong>Réserve :</strong> Un grand corpus n’est pas nécessairement représentatif du genre ou de l’époque du livre cible.</p></figcaption></figure><figure class="chart-card" id="figure-02_sentence_length_distribution" data-state="redo"><div class="figure-heading"><h3>Longueur des phrases</h3><span class="status-badge">À REFAIRE</span></div><button class="figure-open" type="button" data-full-src="assets/02_sentence_length_distribution.svg" data-title="Longueur des phrases" aria-label="Agrandir le graphique : Longueur des phrases"><img loading="lazy" decoding="async" src="assets/02_sentence_length_distribution.png" alt="Longueur des phrases — statut : À REFAIRE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Moyenne de mots par phrase et par chunk.</p><p><strong>Lecture :</strong> Une valeur élevée indique des phrases plus longues dans le fragment ; comparez les distributions et leurs médianes, pas seulement une valeur isolée.</p><p><strong>Réserve :</strong> Le découpage des chunks de cette exécution a perdu les frontières de phrases et la ponctuation ; ne pas interpréter ces métriques chunk-level.</p></figcaption></figure><figure class="chart-card" id="figure-03_word_length_distribution" data-state="available"><div class="figure-heading"><h3>Longueur des mots</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/03_word_length_distribution.svg" data-title="Longueur des mots" aria-label="Agrandir le graphique : Longueur des mots"><img loading="lazy" decoding="async" src="assets/03_word_length_distribution.png" alt="Longueur des mots — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Longueur moyenne des mots en caractères.</p><p><strong>Lecture :</strong> Comparez les médianes et la dispersion entre corpus ; une différence peut refléter le vocabulaire, le sujet ou l’édition.</p><p><strong>Réserve :</strong> La longueur des mots n’est pas une mesure directe de complexité ou d’origine.</p></figcaption></figure><figure class="chart-card" id="figure-04_lexical_diversity" data-state="available"><div class="figure-heading"><h3>Diversité lexicale (MATTR)</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/04_lexical_diversity.svg" data-title="Diversité lexicale (MATTR)" aria-label="Agrandir le graphique : Diversité lexicale (MATTR)"><img loading="lazy" decoding="async" src="assets/04_lexical_diversity.png" alt="Diversité lexicale (MATTR) — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Moyenne mobile du type-token ratio sur une fenêtre fixe.</p><p><strong>Lecture :</strong> MATTR plus élevé signifie davantage de diversité lexicale locale dans la fenêtre utilisée ; la mesure est moins sensible à la longueur totale qu’un TTR brut.</p><p><strong>Réserve :</strong> La fenêtre, la langue, le genre et la tokenisation influencent le résultat ; ce n’est pas un score humain/IA.</p></figcaption></figure><figure class="chart-card" id="figure-05_zipf_curves" data-state="available"><div class="figure-heading"><h3>Distribution des pentes de Zipf</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/05_zipf_curves.svg" data-title="Distribution des pentes de Zipf" aria-label="Agrandir le graphique : Distribution des pentes de Zipf"><img loading="lazy" decoding="async" src="assets/05_zipf_curves.png" alt="Distribution des pentes de Zipf — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Pente estimée de log(fréquence) selon log(rang).</p><p><strong>Lecture :</strong> Les pentes sont généralement négatives. Comparez des pentes estimées avec le même filtrage des rangs et la même unité d’analyse.</p><p><strong>Réserve :</strong> Cette figure montre des pentes par groupe, pas les courbes rang-fréquence elles-mêmes ; le choix des mots rares change l’estimation.</p></figcaption></figure><figure class="chart-card" id="figure-06_punctuation_profile" data-state="redo"><div class="figure-heading"><h3>Profil de ponctuation</h3><span class="status-badge">À REFAIRE</span></div><button class="figure-open" type="button" data-full-src="assets/06_punctuation_profile.svg" data-title="Profil de ponctuation" aria-label="Agrandir le graphique : Profil de ponctuation"><img loading="lazy" decoding="async" src="assets/06_punctuation_profile.png" alt="Profil de ponctuation — statut : À REFAIRE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Occurrences de signes de ponctuation pour 1 000 mots.</p><p><strong>Lecture :</strong> Les taux normalisés permettent de comparer des fragments de tailles différentes ; observez quels signes contribuent aux écarts.</p><p><strong>Réserve :</strong> Le découpage des chunks de cette exécution a perdu les frontières de phrases et la ponctuation ; ne pas interpréter ces métriques chunk-level.</p></figcaption></figure><figure class="chart-card" id="figure-07_function_words_heatmap" data-state="available"><div class="figure-heading"><h3>Mots-outils</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/07_function_words_heatmap.svg" data-title="Mots-outils" aria-label="Agrandir le graphique : Mots-outils"><img loading="lazy" decoding="async" src="assets/07_function_words_heatmap.png" alt="Mots-outils — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Fréquences relatives de mots-outils français par groupe.</p><p><strong>Lecture :</strong> Une case plus intense correspond à une fréquence moyenne plus élevée pour le mot indiqué ; le profil combiné peut renseigner sur des habitudes grammaticales.</p><p><strong>Réserve :</strong> Le sujet, le dialogue, le genre, la période et les choix de tokenisation restent des facteurs importants.</p></figcaption></figure><figure class="chart-card" id="figure-08_repetition_distribution" data-state="available"><div class="figure-heading"><h3>Répétition des bigrammes</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/08_repetition_distribution.svg" data-title="Répétition des bigrammes" aria-label="Agrandir le graphique : Répétition des bigrammes"><img loading="lazy" decoding="async" src="assets/08_repetition_distribution.png" alt="Répétition des bigrammes — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Part des bigrammes répétés selon la définition du pipeline.</p><p><strong>Lecture :</strong> Une valeur élevée indique plus de réutilisation locale de paires de mots dans l’unité mesurée.</p><p><strong>Réserve :</strong> La répétition dépend fortement de la longueur, du vocabulaire et du contenu ; les chunks d’un même document sont corrélés.</p></figcaption></figure><figure class="chart-card" id="figure-09_author_distance_distribution" data-state="unavailable"><div class="figure-heading"><h3>Distance à la baseline historique</h3><span class="status-badge">NON CALCULÉ</span></div><button class="figure-open" type="button" data-full-src="assets/09_author_distance_distribution.svg" data-title="Distance à la baseline historique" aria-label="Agrandir le graphique : Distance à la baseline historique"><img loading="lazy" decoding="async" src="assets/09_author_distance_distribution.png" alt="Distance à la baseline historique — statut : NON CALCULÉ"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Distance normalisée par rapport aux anciens livres de l’auteur.</p><p><strong>Lecture :</strong> Si la baseline historique existe, des valeurs plus faibles indiquent une plus grande proximité avec son profil de référence.</p><p><strong>Réserve :</strong> La baseline de livres historiques de l’auteur est absente ; aucune distance historique n’a été calculée.</p></figcaption></figure><figure class="chart-card" id="figure-10_pca" data-state="available"><div class="figure-heading"><h3>Projection PCA des embeddings</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/10_pca.svg" data-title="Projection PCA des embeddings" aria-label="Agrandir le graphique : Projection PCA des embeddings"><img loading="lazy" decoding="async" src="assets/10_pca.png" alt="Projection PCA des embeddings — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Projection en deux dimensions des embeddings disponibles.</p><p><strong>Lecture :</strong> Chaque point représente un fragment ; des points proches ont des vecteurs proches dans cette représentation projetée.</p><p><strong>Réserve :</strong> La PCA déforme les distances et les embeddings mélangent contenu sémantique et langue ; proximité ne signifie pas même auteur ni même origine.</p></figcaption></figure><figure class="chart-card" id="figure-11_pacmap" data-state="unavailable"><div class="figure-heading"><h3>Projection PaCMAP</h3><span class="status-badge">NON CALCULÉ</span></div><button class="figure-open" type="button" data-full-src="assets/11_pacmap.svg" data-title="Projection PaCMAP" aria-label="Agrandir le graphique : Projection PaCMAP"><img loading="lazy" decoding="async" src="assets/11_pacmap.png" alt="Projection PaCMAP — statut : NON CALCULÉ"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Projection non linéaire exploratoire en deux dimensions.</p><p><strong>Lecture :</strong> Les amas suggèrent des voisinages dans la représentation utilisée ; vérifiez aussi les distances dans l’espace original.</p><p><strong>Réserve :</strong> La projection PaCMAP n’a pas été calculée pendant cette exécution.</p></figcaption></figure><figure class="chart-card" id="figure-12_similarity_matrix_target" data-state="available"><div class="figure-heading"><h3>Auto-similarité de la cible</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/12_similarity_matrix_target.svg" data-title="Auto-similarité de la cible" aria-label="Agrandir le graphique : Auto-similarité de la cible"><img loading="lazy" decoding="async" src="assets/12_similarity_matrix_target.png" alt="Auto-similarité de la cible — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Similarité cosinus entre vecteurs numériques des chunks cibles.</p><p><strong>Lecture :</strong> Les cases plus fortes indiquent des fragments plus similaires selon les colonnes utilisées pour construire les vecteurs.</p><p><strong>Réserve :</strong> La sélection des colonnes et les métadonnées numériques peuvent influencer cette matrice ; ce n’est pas une mesure pure de style.</p></figcaption></figure><figure class="chart-card" id="figure-13_target_timeline" data-state="partial"><div class="figure-heading"><h3>Évolution au fil du livre</h3><span class="status-badge">PARTIEL</span></div><button class="figure-open" type="button" data-full-src="assets/13_target_timeline.svg" data-title="Évolution au fil du livre" aria-label="Agrandir le graphique : Évolution au fil du livre"><img loading="lazy" decoding="async" src="assets/13_target_timeline.png" alt="Évolution au fil du livre — statut : PARTIEL"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Séries de métriques ordonnées selon les chunks de la cible.</p><p><strong>Lecture :</strong> Une variation persistante peut signaler un changement descriptif dans les métriques ; elle ne suffit pas à expliquer sa cause.</p><p><strong>Réserve :</strong> Les métriques partagent un axe brut ; la longueur de phrase est affectée par le découpage et la distance historique auteur est absente.</p></figcaption></figure><figure class="chart-card" id="figure-14_lm_perplexity_distribution" data-state="unavailable"><div class="figure-heading"><h3>Perplexité du modèle de langue</h3><span class="status-badge">NON CALCULÉ</span></div><button class="figure-open" type="button" data-full-src="assets/14_lm_perplexity_distribution.svg" data-title="Perplexité du modèle de langue" aria-label="Agrandir le graphique : Perplexité du modèle de langue"><img loading="lazy" decoding="async" src="assets/14_lm_perplexity_distribution.png" alt="Perplexité du modèle de langue — statut : NON CALCULÉ"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Perplexité moyenne des chunks sous un même modèle causal.</p><p><strong>Lecture :</strong> À modèle et tokenizer identiques, une perplexité plus faible signifie que le modèle attribue une probabilité plus élevée aux tokens observés.</p><p><strong>Réserve :</strong> Aucun job GPU LM n’a produit de métriques ; perplexité, log-rank et corrélations sont indisponibles.</p></figcaption></figure><figure class="chart-card" id="figure-15_lm_logrank_distribution" data-state="unavailable"><div class="figure-heading"><h3>Rang des tokens sous le modèle</h3><span class="status-badge">NON CALCULÉ</span></div><button class="figure-open" type="button" data-full-src="assets/15_lm_logrank_distribution.svg" data-title="Rang des tokens sous le modèle" aria-label="Agrandir le graphique : Rang des tokens sous le modèle"><img loading="lazy" decoding="async" src="assets/15_lm_logrank_distribution.png" alt="Rang des tokens sous le modèle — statut : NON CALCULÉ"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Moyenne du logarithme du rang attribué à chaque token observé.</p><p><strong>Lecture :</strong> Un rang plus faible signifie que le token observé était mieux classé par le modèle de référence.</p><p><strong>Réserve :</strong> Aucun job GPU LM n’a produit de métriques ; perplexité, log-rank et corrélations sont indisponibles.</p></figcaption></figure><figure class="chart-card" id="figure-16_human_literary_vs_hc3" data-state="available"><div class="figure-heading"><h3>Littérature humaine et contrôle HC3</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/16_human_literary_vs_hc3.svg" data-title="Littérature humaine et contrôle HC3" aria-label="Agrandir le graphique : Littérature humaine et contrôle HC3"><img loading="lazy" decoding="async" src="assets/16_human_literary_vs_hc3.png" alt="Littérature humaine et contrôle HC3 — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Distribution de MATTR pour les références littéraires et les réponses humaines HC3.</p><p><strong>Lecture :</strong> Les médianes et recouvrements décrivent les corpus fournis, pas une frontière universelle entre catégories.</p><p><strong>Réserve :</strong> HC3 contient des réponses à des questions, pas de la prose romanesque ; c’est un contrôle secondaire hors domaine.</p></figcaption></figure><figure class="chart-card" id="figure-17_ai_literary_vs_hc3" data-state="partial"><div class="figure-heading"><h3>Référence IA littéraire et HC3</h3><span class="status-badge">PARTIEL</span></div><button class="figure-open" type="button" data-full-src="assets/17_ai_literary_vs_hc3.svg" data-title="Référence IA littéraire et HC3" aria-label="Agrandir le graphique : Référence IA littéraire et HC3"><img loading="lazy" decoding="async" src="assets/17_ai_literary_vs_hc3.png" alt="Référence IA littéraire et HC3 — statut : PARTIEL"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Distribution de MATTR pour les groupes IA présents dans cette exécution.</p><p><strong>Lecture :</strong> Lisez le badge de statut avant toute comparaison : un groupe de réponses HC3 ne remplace pas des récits générés.</p><p><strong>Réserve :</strong> Seul HC3-AI (réponses Q/R, contrôle hors domaine) est présent ; aucune référence IA littéraire n’est disponible.</p></figcaption></figure><figure class="chart-card" id="figure-18_length_effects" data-state="available"><div class="figure-heading"><h3>Effet de la longueur des fragments</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/18_length_effects.svg" data-title="Effet de la longueur des fragments" aria-label="Agrandir le graphique : Effet de la longueur des fragments"><img loading="lazy" decoding="async" src="assets/18_length_effects.png" alt="Effet de la longueur des fragments — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> MATTR moyen selon les classes de longueur en tokens.</p><p><strong>Lecture :</strong> Une évolution entre classes montre que la mesure varie avec la taille des fragments ; comparez les groupes dans la même classe.</p><p><strong>Réserve :</strong> Les classes ne contiennent pas forcément le même nombre de documents ; les fenêtres d’un livre ne sont pas des observations indépendantes.</p></figcaption></figure><figure class="chart-card" id="figure-19_roc_literary" data-state="available"><div class="figure-heading"><h3>ROC du benchmark de référence</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/19_roc_literary.svg" data-title="ROC du benchmark de référence" aria-label="Agrandir le graphique : ROC du benchmark de référence"><img loading="lazy" decoding="async" src="assets/19_roc_literary.png" alt="ROC du benchmark de référence — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Taux de vrais positifs selon le taux de faux positifs.</p><p><strong>Lecture :</strong> La courbe résume un compromis de classement ; la diagonale correspond au hasard. Elle évalue le benchmark, pas la cible seule.</p><p><strong>Réserve :</strong> Résultat dépendant du corpus, des splits groupés et du protocole ; un AUROC n’est pas une probabilité d’origine.</p></figcaption></figure><figure class="chart-card" id="figure-20_precision_recall_literary" data-state="available"><div class="figure-heading"><h3>Précision-rappel du benchmark</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/20_precision_recall_literary.svg" data-title="Précision-rappel du benchmark" aria-label="Agrandir le graphique : Précision-rappel du benchmark"><img loading="lazy" decoding="async" src="assets/20_precision_recall_literary.png" alt="Précision-rappel du benchmark — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Précision selon le rappel sur les références évaluées.</p><p><strong>Lecture :</strong> La précision mesure la part de prédictions positives correctes dans le benchmark ; le rappel mesure la part des positifs retrouvés.</p><p><strong>Réserve :</strong> La précision varie avec la proportion de classes ; elle ne se transpose pas automatiquement à un autre domaine.</p></figcaption></figure><figure class="chart-card" id="figure-21_tpr_at_low_fpr" data-state="available"><div class="figure-heading"><h3>Sensibilité à faible taux de faux positifs</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/21_tpr_at_low_fpr.svg" data-title="Sensibilité à faible taux de faux positifs" aria-label="Agrandir le graphique : Sensibilité à faible taux de faux positifs"><img loading="lazy" decoding="async" src="assets/21_tpr_at_low_fpr.png" alt="Sensibilité à faible taux de faux positifs — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> TPR mesuré à plusieurs seuils de FPR faibles.</p><p><strong>Lecture :</strong> Cette zone est utile quand les faux positifs doivent rester rares ; lisez le nombre de documents indépendants derrière chaque estimation.</p><p><strong>Réserve :</strong> À faible FPR, les estimations sont très instables si le nombre de documents de référence est limité.</p></figcaption></figure><figure class="chart-card" id="figure-22_cross_domain_performance" data-state="available"><div class="figure-heading"><h3>Généralisation entre domaines</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/22_cross_domain_performance.svg" data-title="Généralisation entre domaines" aria-label="Agrandir le graphique : Généralisation entre domaines"><img loading="lazy" decoding="async" src="assets/22_cross_domain_performance.png" alt="Généralisation entre domaines — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Performance du benchmark quand domaine d’apprentissage et domaine de test diffèrent.</p><p><strong>Lecture :</strong> Une baisse hors domaine indique que le résultat dépend en partie du style de corpus ou de sa source.</p><p><strong>Réserve :</strong> Les résultats HC3 ne prédisent pas directement la performance sur des romans.</p></figcaption></figure><figure class="chart-card" id="figure-23_same_vs_different_author_distance" data-state="available"><div class="figure-heading"><h3>Distance même auteur / auteurs différents</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/23_same_vs_different_author_distance.svg" data-title="Distance même auteur / auteurs différents" aria-label="Agrandir le graphique : Distance même auteur / auteurs différents"><img loading="lazy" decoding="async" src="assets/23_same_vs_different_author_distance.png" alt="Distance même auteur / auteurs différents — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Distances observées dans la validation d’attribution en aveugle sur des œuvres humaines.</p><p><strong>Lecture :</strong> Une séparation plus nette entre distributions indique que la distance distingue mieux les documents retenus dans ce benchmark.</p><p><strong>Réserve :</strong> Le benchmark est de taille limitée et ne remplace pas une baseline historique de l’auteur cible.</p></figcaption></figure><figure class="chart-card" id="figure-24_embedding_semantic" data-state="available"><div class="figure-heading"><h3>Distribution de la première composante (PC1)</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/24_embedding_semantic.svg" data-title="Distribution de la première composante (PC1)" aria-label="Agrandir le graphique : Distribution de la première composante (PC1)"><img loading="lazy" decoding="async" src="assets/24_embedding_semantic.png" alt="Distribution de la première composante (PC1) — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Position des groupes sur la première coordonnée de la PCA des embeddings.</p><p><strong>Lecture :</strong> Un décalage indique une différence sur cet axe projeté seulement.</p><p><strong>Réserve :</strong> Ce n’est pas une carte 2D ni une mesure pure de style ; les embeddings sont sensibles au sujet et au contenu.</p></figcaption></figure><figure class="chart-card" id="figure-25_stylometric_projection" data-state="redo"><div class="figure-heading"><h3>Projection de deux métriques stylométriques</h3><span class="status-badge">À REFAIRE</span></div><button class="figure-open" type="button" data-full-src="assets/25_stylometric_projection.svg" data-title="Projection de deux métriques stylométriques" aria-label="Agrandir le graphique : Projection de deux métriques stylométriques"><img loading="lazy" decoding="async" src="assets/25_stylometric_projection.png" alt="Projection de deux métriques stylométriques — statut : À REFAIRE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> MATTR et longueur moyenne des phrases après standardisation.</p><p><strong>Lecture :</strong> Chaque point correspond à une ligne de métriques ; les axes expriment des écarts standardisés, pas des unités brutes.</p><p><strong>Réserve :</strong> Le découpage des chunks de cette exécution a perdu les frontières de phrases et la ponctuation ; ne pas interpréter ces métriques chunk-level.</p></figcaption></figure><figure class="chart-card" id="figure-26_lm_metrics_correlation" data-state="unavailable"><div class="figure-heading"><h3>Corrélation entre métriques LLM</h3><span class="status-badge">NON CALCULÉ</span></div><button class="figure-open" type="button" data-full-src="assets/26_lm_metrics_correlation.svg" data-title="Corrélation entre métriques LLM" aria-label="Agrandir le graphique : Corrélation entre métriques LLM"><img loading="lazy" decoding="async" src="assets/26_lm_metrics_correlation.png" alt="Corrélation entre métriques LLM — statut : NON CALCULÉ"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Corrélations entre perplexité, rang et log-probabilité lorsque calculés.</p><p><strong>Lecture :</strong> Une corrélation proche de +1 ou −1 signale que deux mesures évoluent ensemble dans les données disponibles.</p><p><strong>Réserve :</strong> Aucun job GPU LM n’a produit de métriques ; perplexité, log-rank et corrélations sont indisponibles.</p></figcaption></figure><figure class="chart-card" id="figure-27_metric_effect_sizes" data-state="available"><div class="figure-heading"><h3>Tailles d’effet descriptives</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/27_metric_effect_sizes.svg" data-title="Tailles d’effet descriptives" aria-label="Agrandir le graphique : Tailles d’effet descriptives"><img loading="lazy" decoding="async" src="assets/27_metric_effect_sizes.png" alt="Tailles d’effet descriptives — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Delta de Cliff pour différentes métriques et groupes de référence.</p><p><strong>Lecture :</strong> Le delta va de −1 à +1 ; son signe dépend de l’ordre des groupes et sa magnitude décrit le chevauchement relatif.</p><p><strong>Réserve :</strong> Une taille d’effet n’est pas un verdict ; un seul livre cible limite fortement l’inférence.</p></figcaption></figure><figure class="chart-card" id="figure-28_ai_model_comparison" data-state="unavailable"><div class="figure-heading"><h3>Comparaison entre modèles génératifs</h3><span class="status-badge">NON CALCULÉ</span></div><button class="figure-open" type="button" data-full-src="assets/28_ai_model_comparison.svg" data-title="Comparaison entre modèles génératifs" aria-label="Agrandir le graphique : Comparaison entre modèles génératifs"><img loading="lazy" decoding="async" src="assets/28_ai_model_comparison.png" alt="Comparaison entre modèles génératifs — statut : NON CALCULÉ"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Distributions par modèle IA lorsque plusieurs générations littéraires sont disponibles.</p><p><strong>Lecture :</strong> Comparez les modèles seulement avec des prompts, genres et longueurs documentés et suffisamment variés.</p><p><strong>Réserve :</strong> Le corpus de générations IA littéraires multi-modèles n’a pas été constitué.</p></figcaption></figure></div>
-<h2>Méthodologie et limites</h2><ul><li>Les chunks d’un même document sont corrélés : les inférences principales sont agrégées ou bootstrapées au niveau document.</li><li>Les corpus humains littéraires classiques peuvent différer du roman cible par époque, genre, édition et longueur.</li><li>Une évolution naturelle du style, une correction éditoriale, une écriture assistée ou une révision humaine d’un texte généré restent possibles.</li><li>Les textes IA dépendent fortement du modèle, des prompts, de la température et de la longueur ; un corpus IA littéraire apparié est requis.</li><li>Les perplexités et rangs ne sont comparables qu’avec le même modèle causal et le même tokenizer.</li><li>Les embeddings neuronaux sont principalement sémantiques et peuvent regrouper le sujet plutôt que le style.</li><li>Les projections PCA/PaCMAP/UMAP, clusters et détecteurs zero-shot sont exploratoires, pas des preuves d’origine.</li><li>Le corpus historique de l’auteur cible est actuellement absent ; aucune baseline historique ne doit être interprétée.</li></ul>
-<p>Les scores LM/perplexité et méthodes zero-shot sont marqués NOT_RUN lorsqu’aucun job GPU authentifié n’a produit les résultats. Les comparaisons entre modèles nécessitent le même modèle causal et le même tokenizer.</p>
+<section id="unavailable-figures"><h3>Figures absentes, partielles ou à recalculer</h3><div class='unavailable-list'><p>Ces figures restent affichées dans la galerie avec leur vignette ou leur carte d’absence.</p><ul><li><a href="#figure-09_author_distance_distribution">Distance à la baseline historique</a> <span class="status-badge">NON CALCULÉ</span> — La baseline de livres historiques de l’auteur est absente ; aucune distance historique n’a été calculée.</li><li><a href="#figure-13_target_timeline">Évolution au fil du livre</a> <span class="status-badge">PARTIEL</span> — La série de distance à la baseline historique n’est pas calculable sans ancien livre de l’auteur ; les autres traces de métriques restent descriptives.</li></ul></div></section>
+<div class="gallery"><figure class="chart-card" id="figure-01_corpus_sizes" data-state="available"><div class="figure-heading"><h3>Taille des corpus</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/01_corpus_sizes.svg" data-title="Taille des corpus" aria-label="Agrandir le graphique : Taille des corpus"><img loading="lazy" decoding="async" src="assets/01_corpus_sizes.png" alt="Taille des corpus — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Nombre de documents distincts par groupe.</p><p><strong>Lecture :</strong> Chaque barre compte des documents, pas des chunks. Des groupes très déséquilibrés rendent les comparaisons et benchmarks plus fragiles.</p><p><strong>Réserve :</strong> Un grand corpus n’est pas nécessairement représentatif du genre ou de l’époque du livre cible.</p></figcaption></figure><figure class="chart-card" id="figure-02_sentence_length_distribution" data-state="available"><div class="figure-heading"><h3>Longueur des phrases</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/02_sentence_length_distribution.svg" data-title="Longueur des phrases" aria-label="Agrandir le graphique : Longueur des phrases"><img loading="lazy" decoding="async" src="assets/02_sentence_length_distribution.png" alt="Longueur des phrases — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Moyenne de mots par phrase et par chunk.</p><p><strong>Lecture :</strong> Une valeur élevée indique des phrases plus longues dans le fragment ; comparez les distributions et leurs médianes, pas seulement une valeur isolée.</p><p><strong>Réserve :</strong> Les frontières de phrases doivent être préservées par la segmentation ; les chunks d’un même document ne sont pas indépendants.</p></figcaption></figure><figure class="chart-card" id="figure-03_word_length_distribution" data-state="available"><div class="figure-heading"><h3>Longueur des mots</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/03_word_length_distribution.svg" data-title="Longueur des mots" aria-label="Agrandir le graphique : Longueur des mots"><img loading="lazy" decoding="async" src="assets/03_word_length_distribution.png" alt="Longueur des mots — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Longueur moyenne des mots en caractères.</p><p><strong>Lecture :</strong> Comparez les médianes et la dispersion entre corpus ; une différence peut refléter le vocabulaire, le sujet ou l’édition.</p><p><strong>Réserve :</strong> La longueur des mots n’est pas une mesure directe de complexité ou d’origine.</p></figcaption></figure><figure class="chart-card" id="figure-04_lexical_diversity" data-state="available"><div class="figure-heading"><h3>Diversité lexicale (MATTR)</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/04_lexical_diversity.svg" data-title="Diversité lexicale (MATTR)" aria-label="Agrandir le graphique : Diversité lexicale (MATTR)"><img loading="lazy" decoding="async" src="assets/04_lexical_diversity.png" alt="Diversité lexicale (MATTR) — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Moyenne mobile du type-token ratio sur une fenêtre fixe.</p><p><strong>Lecture :</strong> MATTR plus élevé signifie davantage de diversité lexicale locale dans la fenêtre utilisée ; la mesure est moins sensible à la longueur totale qu’un TTR brut.</p><p><strong>Réserve :</strong> La fenêtre, la langue, le genre et la tokenisation influencent le résultat ; ce n’est pas un score humain/IA.</p></figcaption></figure><figure class="chart-card" id="figure-05_zipf_curves" data-state="available"><div class="figure-heading"><h3>Distribution des pentes de Zipf</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/05_zipf_curves.svg" data-title="Distribution des pentes de Zipf" aria-label="Agrandir le graphique : Distribution des pentes de Zipf"><img loading="lazy" decoding="async" src="assets/05_zipf_curves.png" alt="Distribution des pentes de Zipf — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Pente estimée de log(fréquence) selon log(rang).</p><p><strong>Lecture :</strong> Les pentes sont généralement négatives. Comparez des pentes estimées avec le même filtrage des rangs et la même unité d’analyse.</p><p><strong>Réserve :</strong> Cette figure montre des pentes par groupe, pas les courbes rang-fréquence elles-mêmes ; le choix des mots rares change l’estimation.</p></figcaption></figure><figure class="chart-card" id="figure-06_punctuation_profile" data-state="available"><div class="figure-heading"><h3>Profil de ponctuation</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/06_punctuation_profile.svg" data-title="Profil de ponctuation" aria-label="Agrandir le graphique : Profil de ponctuation"><img loading="lazy" decoding="async" src="assets/06_punctuation_profile.png" alt="Profil de ponctuation — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Occurrences de signes de ponctuation pour 1 000 mots.</p><p><strong>Lecture :</strong> Les taux normalisés permettent de comparer des fragments de tailles différentes ; observez quels signes contribuent aux écarts.</p><p><strong>Réserve :</strong> Vérifiez que les signes ont été préservés par l’extraction et la segmentation avant d’interpréter les écarts.</p></figcaption></figure><figure class="chart-card" id="figure-07_function_words_heatmap" data-state="available"><div class="figure-heading"><h3>Mots-outils</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/07_function_words_heatmap.svg" data-title="Mots-outils" aria-label="Agrandir le graphique : Mots-outils"><img loading="lazy" decoding="async" src="assets/07_function_words_heatmap.png" alt="Mots-outils — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Fréquences relatives de mots-outils français par groupe.</p><p><strong>Lecture :</strong> Une case plus intense correspond à une fréquence moyenne plus élevée pour le mot indiqué ; le profil combiné peut renseigner sur des habitudes grammaticales.</p><p><strong>Réserve :</strong> Le sujet, le dialogue, le genre, la période et les choix de tokenisation restent des facteurs importants.</p></figcaption></figure><figure class="chart-card" id="figure-08_repetition_distribution" data-state="available"><div class="figure-heading"><h3>Répétition des bigrammes</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/08_repetition_distribution.svg" data-title="Répétition des bigrammes" aria-label="Agrandir le graphique : Répétition des bigrammes"><img loading="lazy" decoding="async" src="assets/08_repetition_distribution.png" alt="Répétition des bigrammes — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Part des bigrammes répétés selon la définition du pipeline.</p><p><strong>Lecture :</strong> Une valeur élevée indique plus de réutilisation locale de paires de mots dans l’unité mesurée.</p><p><strong>Réserve :</strong> La répétition dépend fortement de la longueur, du vocabulaire et du contenu ; les chunks d’un même document sont corrélés.</p></figcaption></figure><figure class="chart-card" id="figure-09_author_distance_distribution" data-state="unavailable"><div class="figure-heading"><h3>Distance à la baseline historique</h3><span class="status-badge">NON CALCULÉ</span></div><button class="figure-open" type="button" data-full-src="assets/09_author_distance_distribution.svg" data-title="Distance à la baseline historique" aria-label="Agrandir le graphique : Distance à la baseline historique"><img loading="lazy" decoding="async" src="assets/09_author_distance_distribution.png" alt="Distance à la baseline historique — statut : NON CALCULÉ"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Distance normalisée par rapport aux anciens livres de l’auteur.</p><p><strong>Lecture :</strong> Si la baseline historique existe, des valeurs plus faibles indiquent une plus grande proximité avec son profil de référence.</p><p><strong>Réserve :</strong> La baseline de livres historiques de l’auteur est absente ; aucune distance historique n’a été calculée.</p></figcaption></figure><figure class="chart-card" id="figure-10_pca" data-state="available"><div class="figure-heading"><h3>Projection PCA des embeddings</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/10_pca.svg" data-title="Projection PCA des embeddings" aria-label="Agrandir le graphique : Projection PCA des embeddings"><img loading="lazy" decoding="async" src="assets/10_pca.png" alt="Projection PCA des embeddings — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Projection en deux dimensions des embeddings disponibles.</p><p><strong>Lecture :</strong> Chaque point représente un fragment ; des points proches ont des vecteurs proches dans cette représentation projetée.</p><p><strong>Réserve :</strong> La PCA déforme les distances et les embeddings mélangent contenu sémantique et langue ; proximité ne signifie pas même auteur ni même origine.</p></figcaption></figure><figure class="chart-card" id="figure-11_pacmap" data-state="available"><div class="figure-heading"><h3>Projection PaCMAP</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/11_pacmap.svg" data-title="Projection PaCMAP" aria-label="Agrandir le graphique : Projection PaCMAP"><img loading="lazy" decoding="async" src="assets/11_pacmap.png" alt="Projection PaCMAP — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Projection non linéaire exploratoire en deux dimensions.</p><p><strong>Lecture :</strong> Les amas suggèrent des voisinages dans la représentation utilisée ; vérifiez aussi les distances dans l’espace original.</p><p><strong>Réserve :</strong> Une projection 2D déforme les distances et ne constitue pas une inférence statistique.</p></figcaption></figure><figure class="chart-card" id="figure-12_similarity_matrix_target" data-state="available"><div class="figure-heading"><h3>Auto-similarité de la cible</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/12_similarity_matrix_target.svg" data-title="Auto-similarité de la cible" aria-label="Agrandir le graphique : Auto-similarité de la cible"><img loading="lazy" decoding="async" src="assets/12_similarity_matrix_target.png" alt="Auto-similarité de la cible — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Similarité cosinus entre vecteurs numériques des chunks cibles.</p><p><strong>Lecture :</strong> Les cases plus fortes indiquent des fragments plus similaires selon les colonnes utilisées pour construire les vecteurs.</p><p><strong>Réserve :</strong> La sélection des colonnes et les métadonnées numériques peuvent influencer cette matrice ; ce n’est pas une mesure pure de style.</p></figcaption></figure><figure class="chart-card" id="figure-13_target_timeline" data-state="partial"><div class="figure-heading"><h3>Évolution au fil du livre</h3><span class="status-badge">PARTIEL</span></div><button class="figure-open" type="button" data-full-src="assets/13_target_timeline.svg" data-title="Évolution au fil du livre" aria-label="Agrandir le graphique : Évolution au fil du livre"><img loading="lazy" decoding="async" src="assets/13_target_timeline.png" alt="Évolution au fil du livre — statut : PARTIEL"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Médianes glissantes standardisées sur des fenêtres primaires non chevauchantes ; fragments de moins de la moitié de la taille nominale exclus de cette vue uniquement.</p><p><strong>Lecture :</strong> Une variation persistante peut signaler un changement descriptif dans les métriques ; elle ne suffit pas à expliquer sa cause. Le lissage sert uniquement à la visualisation et la table complète reste disponible.</p><p><strong>Réserve :</strong> La série de distance à la baseline historique n’est pas calculable sans ancien livre de l’auteur ; les autres traces de métriques restent descriptives.</p></figcaption></figure><figure class="chart-card" id="figure-14_lm_perplexity_distribution" data-state="available"><div class="figure-heading"><h3>Perplexité du modèle de langue</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/14_lm_perplexity_distribution.svg" data-title="Perplexité du modèle de langue" aria-label="Agrandir le graphique : Perplexité du modèle de langue"><img loading="lazy" decoding="async" src="assets/14_lm_perplexity_distribution.png" alt="Perplexité du modèle de langue — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Perplexité moyenne des chunks sous un même modèle causal.</p><p><strong>Lecture :</strong> À modèle et tokenizer identiques, une perplexité plus faible signifie que le modèle attribue une probabilité plus élevée aux tokens observés.</p><p><strong>Réserve :</strong> La valeur dépend du modèle causal et de son tokenizer ; une faible perplexité n’est pas une preuve d’écriture IA ou humaine.</p></figcaption></figure><figure class="chart-card" id="figure-15_lm_logrank_distribution" data-state="available"><div class="figure-heading"><h3>Rang des tokens sous le modèle</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/15_lm_logrank_distribution.svg" data-title="Rang des tokens sous le modèle" aria-label="Agrandir le graphique : Rang des tokens sous le modèle"><img loading="lazy" decoding="async" src="assets/15_lm_logrank_distribution.png" alt="Rang des tokens sous le modèle — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Moyenne du logarithme du rang attribué à chaque token observé.</p><p><strong>Lecture :</strong> Un rang plus faible signifie que le token observé était mieux classé par le modèle de référence.</p><p><strong>Réserve :</strong> Le rang dépend du modèle causal et du tokenizer ; gardez-les identiques pour comparer les corpus.</p></figcaption></figure><figure class="chart-card" id="figure-16_human_literary_vs_hc3" data-state="available"><div class="figure-heading"><h3>Littérature humaine et contrôle HC3</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/16_human_literary_vs_hc3.svg" data-title="Littérature humaine et contrôle HC3" aria-label="Agrandir le graphique : Littérature humaine et contrôle HC3"><img loading="lazy" decoding="async" src="assets/16_human_literary_vs_hc3.png" alt="Littérature humaine et contrôle HC3 — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Distribution de MATTR pour les références littéraires et les réponses humaines HC3.</p><p><strong>Lecture :</strong> Les médianes et recouvrements décrivent les corpus fournis, pas une frontière universelle entre catégories.</p><p><strong>Réserve :</strong> HC3 contient des réponses à des questions, pas de la prose romanesque ; c’est un contrôle secondaire hors domaine.</p></figcaption></figure><figure class="chart-card" id="figure-17_ai_literary_vs_hc3" data-state="available"><div class="figure-heading"><h3>Référence IA littéraire et HC3</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/17_ai_literary_vs_hc3.svg" data-title="Référence IA littéraire et HC3" aria-label="Agrandir le graphique : Référence IA littéraire et HC3"><img loading="lazy" decoding="async" src="assets/17_ai_literary_vs_hc3.png" alt="Référence IA littéraire et HC3 — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Distribution de MATTR pour les groupes IA présents dans cette exécution.</p><p><strong>Lecture :</strong> Lisez le badge de statut avant toute comparaison : un groupe de réponses HC3 ne remplace pas des récits générés.</p><p><strong>Réserve :</strong> HC3 reste une référence de réponses Q/R hors domaine ; l’interprétation littéraire exige des générations appariées en genre et longueur.</p></figcaption></figure><figure class="chart-card" id="figure-18_length_effects" data-state="available"><div class="figure-heading"><h3>Effet de la longueur des fragments</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/18_length_effects.svg" data-title="Effet de la longueur des fragments" aria-label="Agrandir le graphique : Effet de la longueur des fragments"><img loading="lazy" decoding="async" src="assets/18_length_effects.png" alt="Effet de la longueur des fragments — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> MATTR moyen selon les classes de longueur en tokens.</p><p><strong>Lecture :</strong> Une évolution entre classes montre que la mesure varie avec la taille des fragments ; comparez les groupes dans la même classe.</p><p><strong>Réserve :</strong> Les classes ne contiennent pas forcément le même nombre de documents ; les fenêtres d’un livre ne sont pas des observations indépendantes.</p></figcaption></figure><figure class="chart-card" id="figure-19_roc_literary" data-state="available"><div class="figure-heading"><h3>ROC de validation sur corpus de référence</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/19_roc_literary.svg" data-title="ROC de validation sur corpus de référence" aria-label="Agrandir le graphique : ROC de validation sur corpus de référence"><img loading="lazy" decoding="async" src="assets/19_roc_literary.png" alt="ROC de validation sur corpus de référence — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Taux de vrais positifs selon le taux de faux positifs, sur des scores out-of-fold agrégés au niveau document.</p><p><strong>Lecture :</strong> La courbe résume un compromis de classement ; la diagonale correspond au hasard. Elle évalue les références, pas la cible seule.</p><p><strong>Réserve :</strong> HC3 est un contrôle secondaire Q/R hors domaine littéraire ; il ne remplace pas un benchmark romanesque apparié.</p></figcaption></figure><figure class="chart-card" id="figure-20_precision_recall_literary" data-state="available"><div class="figure-heading"><h3>Précision-rappel sur corpus de référence</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/20_precision_recall_literary.svg" data-title="Précision-rappel sur corpus de référence" aria-label="Agrandir le graphique : Précision-rappel sur corpus de référence"><img loading="lazy" decoding="async" src="assets/20_precision_recall_literary.png" alt="Précision-rappel sur corpus de référence — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Précision selon le rappel, sur des scores out-of-fold agrégés au niveau document.</p><p><strong>Lecture :</strong> La précision mesure la part de prédictions positives correctes dans le benchmark ; le rappel mesure la part des positifs retrouvés.</p><p><strong>Réserve :</strong> La précision varie avec la proportion de classes ; HC3 est un contrôle secondaire Q/R, pas un corpus littéraire.</p></figcaption></figure><figure class="chart-card" id="figure-21_tpr_at_low_fpr" data-state="available"><div class="figure-heading"><h3>Sensibilité à faible taux de faux positifs</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/21_tpr_at_low_fpr.svg" data-title="Sensibilité à faible taux de faux positifs" aria-label="Agrandir le graphique : Sensibilité à faible taux de faux positifs"><img loading="lazy" decoding="async" src="assets/21_tpr_at_low_fpr.png" alt="Sensibilité à faible taux de faux positifs — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> TPR mesuré à plusieurs seuils de FPR faibles, sur documents indépendants.</p><p><strong>Lecture :</strong> Cette zone est utile quand les faux positifs doivent rester rares ; lisez le nombre de documents indépendants derrière chaque estimation. Le TPR à 0,1 % n’est calculé que s’il existe au moins 1 000 documents négatifs.</p><p><strong>Réserve :</strong> À faible FPR, les estimations restent instables ; si la résolution documentaire est insuffisante, la valeur est laissée non estimable, jamais extrapolée.</p></figcaption></figure><figure class="chart-card" id="figure-22_cross_domain_performance" data-state="available"><div class="figure-heading"><h3>Généralisation entre domaines</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/22_cross_domain_performance.svg" data-title="Généralisation entre domaines" aria-label="Agrandir le graphique : Généralisation entre domaines"><img loading="lazy" decoding="async" src="assets/22_cross_domain_performance.png" alt="Généralisation entre domaines — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> AUROC document-level et IC bootstrap 95 %, HC3→littéraire et littéraire→HC3.</p><p><strong>Lecture :</strong> Une baisse hors domaine indique que les distributions apprises sur un corpus se généralisent moins à l’autre ; comparez aussi les intervalles et la taille des corpus.</p><p><strong>Réserve :</strong> Le classificateur est entraîné uniquement sur un domaine de référence et testé sur l’autre. C’est un diagnostic de domain shift, pas un score de la cible.</p></figcaption></figure><figure class="chart-card" id="figure-23_same_vs_different_author_distance" data-state="available"><div class="figure-heading"><h3>Distance même auteur / auteurs différents</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/23_same_vs_different_author_distance.svg" data-title="Distance même auteur / auteurs différents" aria-label="Agrandir le graphique : Distance même auteur / auteurs différents"><img loading="lazy" decoding="async" src="assets/23_same_vs_different_author_distance.png" alt="Distance même auteur / auteurs différents — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Distances observées dans la validation d’attribution en aveugle sur des œuvres humaines.</p><p><strong>Lecture :</strong> Une séparation plus nette entre distributions indique que la distance distingue mieux les documents retenus dans ce benchmark.</p><p><strong>Réserve :</strong> Le benchmark est de taille limitée et ne remplace pas une baseline historique de l’auteur cible.</p></figcaption></figure><figure class="chart-card" id="figure-24_embedding_semantic" data-state="available"><div class="figure-heading"><h3>Carte des embeddings neuronaux</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/24_embedding_semantic.svg" data-title="Carte des embeddings neuronaux" aria-label="Agrandir le graphique : Carte des embeddings neuronaux"><img loading="lazy" decoding="async" src="assets/24_embedding_semantic.png" alt="Carte des embeddings neuronaux — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Chaque point est un chunk projeté sur les deux premières composantes PCA d’un embedding sentence-transformers.</p><p><strong>Lecture :</strong> Regardez si les points cible se mélangent ou s’écartent des groupes de référence ; les voisinages sont exploratoires, pas une décision de classe.</p><p><strong>Réserve :</strong> Les embeddings sont surtout sémantiques et peuvent regrouper par sujet. La PCA déforme les distances ; le chevauchement ne démontre ni origine humaine ni IA.</p></figcaption></figure><figure class="chart-card" id="figure-25_stylometric_projection" data-state="available"><div class="figure-heading"><h3>Projection de métriques stylométriques</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/25_stylometric_projection.svg" data-title="Projection de métriques stylométriques" aria-label="Agrandir le graphique : Projection de métriques stylométriques"><img loading="lazy" decoding="async" src="assets/25_stylometric_projection.png" alt="Projection de métriques stylométriques — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> PCA de MATTR, longueur moyenne de phrase et pente de Zipf ; standardisation/PCA ajustées sur les références uniquement.</p><p><strong>Lecture :</strong> Chaque point est un chunk ; la cible est projetée sur les axes appris avec les références. Les axes sont des composantes, pas des unités brutes.</p><p><strong>Réserve :</strong> Projection exploratoire et sensible au genre, à la longueur et au sujet ; les points d’un livre sont corrélés.</p></figcaption></figure><figure class="chart-card" id="figure-26_lm_metrics_correlation" data-state="available"><div class="figure-heading"><h3>Corrélation entre métriques LLM</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/26_lm_metrics_correlation.svg" data-title="Corrélation entre métriques LLM" aria-label="Agrandir le graphique : Corrélation entre métriques LLM"><img loading="lazy" decoding="async" src="assets/26_lm_metrics_correlation.png" alt="Corrélation entre métriques LLM — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Corrélations entre perplexité, rang et log-probabilité lorsque calculés.</p><p><strong>Lecture :</strong> Une corrélation proche de +1 ou −1 signale que deux mesures évoluent ensemble dans les données disponibles.</p><p><strong>Réserve :</strong> Une corrélation décrit une co-variation, pas une cause, une indépendance des mesures ou une origine de texte.</p></figcaption></figure><figure class="chart-card" id="figure-27_metric_effect_sizes" data-state="available"><div class="figure-heading"><h3>Tailles d’effet descriptives</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/27_metric_effect_sizes.svg" data-title="Tailles d’effet descriptives" aria-label="Agrandir le graphique : Tailles d’effet descriptives"><img loading="lazy" decoding="async" src="assets/27_metric_effect_sizes.png" alt="Tailles d’effet descriptives — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Delta de Cliff pour différentes métriques et groupes de référence.</p><p><strong>Lecture :</strong> Le delta va de −1 à +1 ; son signe dépend de l’ordre des groupes et sa magnitude décrit le chevauchement relatif.</p><p><strong>Réserve :</strong> Une taille d’effet n’est pas un verdict ; un seul livre cible limite fortement l’inférence.</p></figcaption></figure><figure class="chart-card" id="figure-28_ai_model_comparison" data-state="available"><div class="figure-heading"><h3>Comparaison entre modèles génératifs</h3><span class="status-badge">DISPONIBLE</span></div><button class="figure-open" type="button" data-full-src="assets/28_ai_model_comparison.svg" data-title="Comparaison entre modèles génératifs" aria-label="Agrandir le graphique : Comparaison entre modèles génératifs"><img loading="lazy" decoding="async" src="assets/28_ai_model_comparison.png" alt="Comparaison entre modèles génératifs — statut : DISPONIBLE"></button><p class="zoom-hint">Cliquer pour agrandir · SVG haute résolution si disponible</p><figcaption><p><strong>Mesure :</strong> Distributions des métriques par modèle, une première fenêtre non chevauchante de 500 tokens par document.</p><p><strong>Lecture :</strong> Chaque point correspond à un document (pas à un chunk indépendant) ; comparez médianes, dispersion et n par modèle.</p><p><strong>Réserve :</strong> Les modèles partagent les mêmes prompts mais ne respectent pas également les longueurs demandées ; cette figure ne représente pas toutes leurs sorties possibles.</p></figcaption></figure></div>
+<h2>Méthodologie et limites</h2><ul><li>Les chunks d’un même document sont corrélés : les inférences principales sont agrégées ou bootstrapées au niveau document.</li><li>Les corpus humains littéraires classiques peuvent différer du roman cible par époque, genre, édition et longueur.</li><li>Une évolution naturelle du style, une correction éditoriale, une écriture assistée ou une révision humaine d’un texte généré restent possibles.</li><li>Les textes IA dépendent fortement du modèle, des prompts, de la température et de la longueur ; un corpus IA littéraire apparié est requis.</li><li>Les perplexités et rangs ne sont comparables qu’avec le même modèle causal et le même tokenizer.</li><li>Les embeddings neuronaux sont principalement sémantiques et peuvent regrouper le sujet plutôt que le style.</li><li>Les projections PCA/PaCMAP/UMAP, clusters et détecteurs zero-shot sont exploratoires, pas des preuves d’origine.</li><li>Les tests inter-domaines entraînent sur un corpus de référence et testent sur l’autre ; leur dégradation mesure un domain shift, pas l’origine de la cible.</li><li>Les taux de vrais positifs à très faible FPR ne sont publiés que si le nombre de documents négatifs permet cette résolution ; le seuil 0,1 % exige au moins 1 000 documents négatifs.</li><li>Le corpus historique de l’auteur cible est actuellement absent ; aucune baseline historique ne doit être interprétée.</li></ul>
+<p>Les scores de langage causal sont disponibles pour cette exécution. Perplexité et log-rank décrivent la compatibilité avec le modèle/tokenizer de référence, pas l’origine du texte. Fast-DetectGPT et Binoculars ne sont pas exécutés ici. Les comparaisons LM nécessitent le même modèle causal et le même tokenizer.</p>
 <dialog id="figure-dialog" class="lightbox" aria-labelledby="figure-dialog-title"><div class="lightbox-head"><h2 id="figure-dialog-title">Graphique agrandi</h2><form method="dialog"><button class="dialog-close" type="submit" aria-label="Fermer l’image agrandie">Fermer</button></form></div><img id="figure-dialog-image" alt=""><p id="figure-dialog-note" class="muted"></p></dialog>
 <footer>Projet local-first text-forensics · seed=42 · page composée uniquement de dérivés statistiques · généré automatiquement.</footer>
 </main><script>
